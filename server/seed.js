@@ -3,7 +3,7 @@ const db = require("./models");
 async function seedDatabase() {
   try {
 
-    await db.sequelize.sync({ force: true }); // Drops existing tables and recreates them
+    await db.sequelize.sync({ force: true }); 
     await db.Product.bulkCreate([
       { name: "Laptop", price: 799.99, category: "Electronics", availability: true },
       { name: "Smartphone", price: 699.99, category: "Electronics", availability: true },
