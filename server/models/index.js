@@ -4,10 +4,9 @@ const Sequelize = require("sequelize");
 const config = require("../config/config.json").production;
 
 const sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
-  config
+  process.env.DB_NAME, 
+  process.env.DB_USERNAME,
+  process.env.DB_PASSWORD
 );
 
 const db = {};
