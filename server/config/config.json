@@ -1,0 +1,9 @@
+{
+    "development": {
+      "username": "root",
+      "password": "Abhishek@1",
+      "database": "company_bot",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
