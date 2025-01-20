@@ -4,14 +4,12 @@ exports.handleMessage = async (req, res) => {
   const { message } = req.body;
 
   try {
-    // Handle greeting (Hi, Hello)
     if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
       return res.json({
         response: "Hello! How can I assist you today? You can ask about our product prices, business hours, return policy, support contact, or our branch location?",
       });
     }
 
-    // Handle price queries
     if (message.toLowerCase().includes("price")) {
       const productName = message.split("price of")[1]?.trim(); // Extract product name
       if (!productName) {
@@ -31,7 +29,6 @@ exports.handleMessage = async (req, res) => {
       }
     }
 
-    // Handle branch location queries
     if (message.toLowerCase().includes("branch")) {
       const location = await Location.findOne();
       if (location) {
@@ -45,7 +42,6 @@ exports.handleMessage = async (req, res) => {
       }
     }
 
-    // Handle FAQ Queries
     if (message.toLowerCase().includes("hours") || message.toLowerCase().includes("business hours")) {
       const faq = await FAQ.findOne({ where: { question: "business hours" } });
       return res.json({
@@ -67,7 +63,7 @@ exports.handleMessage = async (req, res) => {
       });
     }
 
-    // Default case when the message doesn't match any of the above
+    
     res.json({
       response: "I couldn't understand that. Please try asking something about the price, business hours, return policy, support contact, or our branch location.",
     });
