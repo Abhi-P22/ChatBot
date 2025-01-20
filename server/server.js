@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const db = require("./models");
-const routes = require("./routes/chatbot"); // Updated to use index.js in routes
+const routes = require("./routes/chatbot"); 
 const app = express();
 
 app.use(cors({
