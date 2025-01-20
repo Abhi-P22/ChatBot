@@ -6,7 +6,7 @@ const routes = require("./routes/chatbot");
 const app = express();
 
 app.use(cors({
-    origin: process.env.origin || 'https://chatbotrepo.vercel.app/',
+    origin: process.env.origin || 'https://chatbotrepo.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }));
 
