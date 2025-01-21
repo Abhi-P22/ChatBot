@@ -6,7 +6,7 @@ exports.handleMessage = async (req, res) => {
   try {
     if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
       return res.json({
-        response: "Hello! How can I assist you today? You can ask about our product prices, business hours, return policy, support contact, or our branch location?",
+        response: "Hello! How can I assist you today? You can ask about price of products(laptop,smarthphone,headphones,desk chair...), business hours, return policy, support contact, or our branch location",
       });
     }
 
@@ -65,7 +65,7 @@ exports.handleMessage = async (req, res) => {
 
     
     res.json({
-      response: "I couldn't understand that. Please try asking something about the price, business hours, return policy, support contact, or our branch location.",
+      response: "I couldn't understand that. Please try asking something about the price of products(laptop,smarthphone,headphones,desk chair...), business hours, return policy, support contact, or our branch location.",
     });
   } catch (error) {
     console.error("Error processing message:", error);
