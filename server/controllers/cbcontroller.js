@@ -6,7 +6,7 @@ exports.handleMessage = async (req, res) => {
   try {
     if (message.toLowerCase().includes("hi") || message.toLowerCase().includes("hello")) {
       return res.json({
-        response: "Hello! How can I assist you today? You can ask about price of products(laptop,smarthphone,headphones,desk chair...), business hours, return policy, support contact, or our branch location",
+        response: "Hello! How can I assist you today? You can ask about price of products(laptop,smarthphone,headphones,desk chair...), business hours, return policy, support contact, or our branch location.",
       });
     }
 
